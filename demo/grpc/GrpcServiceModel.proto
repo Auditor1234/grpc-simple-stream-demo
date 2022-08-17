@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package com.li.rpc;  // 自己所在的包
+
+option java_multiple_files = true;
+option java_package = "com.li.rpc.domain";  // 输出文件所在的包
+option java_outer_classname = "GrpcServiceModel";  // 输出的类名
+
+message DataRequest{
+    string instanceId = 1;  // 这里的1，2，3仅代表序号，不是赋值
+    string name = 2;
+    string data = 3;
+}
+
+message DataResponse{
+    string instanceId = 1;
+    string message = 2;
+}

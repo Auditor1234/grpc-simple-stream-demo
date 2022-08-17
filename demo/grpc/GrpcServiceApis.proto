@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package com.li.rpc;
+
+option java_multiple_files = true;
+option java_package = "com.li.rpc.rpcservice";
+option java_outer_classname = "GrpcServer";
+
+import "GrpcServiceModel.proto";
+
+service GrpcServiceApis {
+    rpc getName(DataRequest) returns (DataResponse){};
+}
